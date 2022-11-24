@@ -71,48 +71,58 @@ Assim como no front-end o gerenciador de pactoes **npm** indetificará todas as 
 
 ---
 
-## 🔧 Executando o projeto
-
+## Preparando o MongoDB
 Após as instalações de todas as depedências do projeto, já é possível executá-lo! Mas antes é necessário um ajuste no back-end, é preciso conectar o projeto com o MongoDB. 
 
-Para isso, entre no site do <a href="https://www.mongodb.com/">MongoDB</a> e crie uma conta. Com o site logado, crie um novo projeto.
+- Para isso, entre no site do <a href="https://www.mongodb.com/">MongoDB</a> e crie uma conta. Com o site logado, crie um novo projeto.
 
 ![criando database](readmeAssets/Screenshot_1.jpg)
 
-Dê um nome e clique em continuar e depois em criar.
+- Dê um nome e clique em continuar e depois em criar.
 
 ![criando database](readmeAssets/Screenshot_2.jpg)
 
-Crie um novo Database e selecione a opção grátis
+- Crie um novo Database e selecione a opção grátis
 
 ![criando database](readmeAssets/Screenshot_3.jpg)
 
-Clique em criar cluster
+- Clique em criar cluster
 
 ![criando database](readmeAssets/Screenshot_4.jpg)
 
-
-Coloque um usuário e uma senha e clique em criar usuário, essa autenticação será utilizada no código para conexão do back-end
+- Coloque um usuário e uma senha e clique em criar usuário, essa autenticação será utilizada no código para conexão do back-end
 
 ![criando database](readmeAssets/Screenshot_5.jpg)
 
-Na tela de databases clique em connect
+- Na tela de databases clique em connect
 
 ![criando database](readmeAssets/Screenshot_6.jpg)
 
-Selecione a opção indicada na imagem e clieque em "Choose a connection method"
+- Selecione a opção indicada na imagem e clieque em "Choose a connection method"
 
 ![criando database](readmeAssets/Screenshot_7.jpg)
 
-Selecione a opção de conectar a sua aplicação 
+- Selecione a opção de conectar a sua aplicação 
 
 ![criando database](readmeAssets/Screenshot_8.jpg)
 
-Copie a autenticação que aparece na tela e vamos colocar no código para a autenticação do nosso back-end, assim como descrito nos próximos passos
+- Copie a autenticação que aparece na tela e vamos colocar no código para a autenticação do nosso back-end, assim como descrito nos próximos passos
 
 ![criando database](readmeAssets/Screenshot_9.jpg)
 
+- Na pasta **server** crie um arquivo chamado **.env**, nele vamos colocar a seguinte linha:
 
+```
+MONGO_DB = "mongodb+srv://admin:<SUBSTITUA AQUI A SENHA CONFIGURADA NO MONGODB>@cluster0.s5qpswb.mongodb.net/?retryWrites=true&w=majority"
+```
+O conteudo da string é a autenticação copiada no item anterior e no campo de **password**, substitua pela senha criada no MongDB
+
+o arquivo **.env** de exemplo fica da seguinte forma:
+
+![criando database](readmeAssets/Screenshot_10.jpg)
+
+
+## 🔧 Executando o projeto
 
 
 
