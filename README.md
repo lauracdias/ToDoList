@@ -1,5 +1,6 @@
 # Projeto de ToDoList
 ### Projeto feito com MERN (Mongo + Express + React + NodeJs)
+
 ### Esse projeto foi feito para a avaliação final da matéria de laboratório de Engenharia de Software (C214). A ideia é simples, uma lista de tarefa onde o usuário consegue criar, visualizar, atualizar e remover tarefas. Todas as tarefas são armazenadas  em um database no MongoDB.
 ---
 ## 🚀 Começando
@@ -123,115 +124,100 @@ o arquivo **.env** de exemplo fica da seguinte forma:
 
 
 ## 🔧 Executando o projeto
+Com tudo configurado, finalmente, vamos executar o projeto!
+É necessário colocar o front-end e o back-end para rodar!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+A partir do diretório raiz do projeto entre na pasta onde o front-end está, utilizando os seguintes comandos:
 
 ```
-Dar exemplos
+$ cd front
+$ cd todo-list-app
 ```
 
-E repita:
+Dentro desse diretório, coloque o front para abrir com o seguinte comando:
+```
+$ npm start
+```
+
+O seu navegador padrão abrirá e aparecerá a seguinte página:
+
+![front](readmeAssets/Screenshot_11.jpg)
+Repare que a nossa aplicação está na porta 3000, como configurado no código.
+
+Com o front já executando, é necessário colocar o back-end para rodar e receber as requisições do front-end.
+Para isso, a partir do diretório raiz do projeto, entre na pasta do back-end, com o seguinte comando:
 
 ```
-Até finalizar
+$ cd server
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+Para rodar o back-end, utlizamos o seguinte comando:
+```
+$ npm start
+```
+
+Se aparecer os seguintes logs no terminal, significa que o procedimento ocorreu com sucesso e nossa aplicação já está conectada com o database do MongoDB.
+![back](readmeAssets/Screenshot_12.jpg)
+
+Caso apareça algo diferente, tente reinstalar as dependências e configurar o MongoDB como já explicado nesse **readme**
+
+Chegou a hora de testar na prática o projeto!
+Vamos começar adicionando uma tarefa exemplo
+
+Digite o nome da tarefa e pressione **Adicionar**
+
+![Adicionar](readmeAssets/Screenshot_13.jpg)
+
+A tarefa aparecerá na lista
+
+![Adicionar](readmeAssets/Screenshot_14.jpg)
+
+Agora vamos conferir no MongoDB se a tarefa foi adicionada com sucesso, abra seu database e clique em **Browse Collections**, e sua tarefa estará lá. Como na imagem abaixo:
+
+![db](readmeAssets/Screenshot_15.jpg)
+
+Voltando para o front-end vamos atualizar a tarefa adicionada, clique ao lado do nome, o botão atualizar, troque o nome da tarefa e depois clique em **Atualizar**.
+
+![update](readmeAssets/Screenshot_16.jpg)
+
+Agora vamos conferir no MongoDB se de fato ela foi atualizada, clique em **REFRESH** para atualizar os dados. 
+
+![update](readmeAssets/Screenshot_17.jpg)
+
+Podemos perceber que a tarefa foi atualizada também do database
+
+Por fim, vamos testar a funcionalidade de excluir a tarefa. Clique no botão **Excluir** da tarefa desejada:
+
+![update](readmeAssets/Screenshot_18.jpg)
+
+Agora vamos verificar no MongoDB se lá também foi excluido, clique novamente em **REFRESH** para atualizar os dados. 
+
+![update](readmeAssets/Screenshot_19.jpg)
+
+Podemos perceber que a tarefa foi excluida com sucesso!
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
+Por fim, para exexutar os testes automatizados é necessário executar os seguintes comandos:
+A partir do diretório raiz do projeto, entre na pasta **server**
 
 ```
-Dar exemplos
+$ cd server
 ```
 
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
+E execute o seguinte comando para rodar os testes:
 
 ```
-Dar exemplos
+$ npm test
 ```
 
-## 📦 Implantação
+O **Jest** executará todos os testes da suite, e apresentará os resultados no terminal, dessa maneira: 
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+![update](readmeAssets/Screenshot_20.jpg)
 
-## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+## ✒️ Desenvolvedores
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+- Laura Cristina Dias - GEC - 1585
 
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
+- Luan Patrick do Couto Siqueira - GEC - 1655
