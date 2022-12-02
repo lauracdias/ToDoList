@@ -1,17 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const dotenv = require('dotenv').config()
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT =  5000
 const rotaItemToDoList = require('./routes/routesToDoList')
 const cors = require('cors')
+const uri  = `mongodb+srv://user:pass@cluster0.nve9cqv.mongodb.net/?retryWrites=true&w=majority`
 
 // obter os dados no formato json
 app.use(express.json())
 
 app.use(cors())
 
-mongoose.connect(process.env.MONGO_DB)
+mongoose.connect(uri)
 .then(() => console.log("Conectado ao banco de dados"))
 .catch(err => console.log(err))
 
